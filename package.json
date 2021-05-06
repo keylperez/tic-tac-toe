@@ -1,0 +1,23 @@
+{
+  "name": "tic-tac-toe",
+  "version": "1.0.0",
+  "description": "tic tac toe game to practice js",
+  "main": "index.js",
+  "scripts": {
+    "compile:scss": "node-sass src/sass/main.scss src/css/style.css",
+    "watch:scss": "node-sass src/sass/main.scss src/css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keylperez/tic-tac-toe.git"
+  },
+  "author": "keylperez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keylperez/tic-tac-toe/issues"
+  },
+  "homepage": "https://github.com/keylperez/tic-tac-toe#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
