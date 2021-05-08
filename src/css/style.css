@@ -1,0 +1,79 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
+
+body {
+  font-family: "Press Start 2P", cursive;
+  line-height: 1.8;
+  font-weight: 400;
+  background-image: radial-gradient(circle, #e6504b 10%, #99002b 50%); }
+
+header {
+  padding-top: 30px;
+  grid-column: 1 / -1;
+  grid-template-columns: 100%;
+  justify-items: center;
+  color: #00d8ff; }
+  header h1 {
+    grid-column: 2 / 5;
+    justify-self: center;
+    font-size: 1.5em;
+    text-align: center;
+    padding-bottom: 10px; }
+  header p {
+    grid-column: 2 / 5;
+    text-align: center;
+    font-size: 1rem; }
+
+.ticBox {
+  padding-top: 30px;
+  grid-column: 100%;
+  justify-self: center;
+  justify-items: stretch;
+  align-items: stretch;
+  grid-column: 2 / 5;
+  grid-template-columns: 200px 200px 200px !important;
+  grid-template-rows: 200px 200px 200px !important; }
+
+.tacBox {
+  border: 5px solid #f0ff00; }
+  .tacBox-1 {
+    border-top: none;
+    border-left: none; }
+  .tacBox-2 {
+    border-top: none; }
+  .tacBox-3 {
+    border-right: none;
+    border-top: none; }
+  .tacBox-4 {
+    border-left: none; }
+  .tacBox-6 {
+    border-right: none; }
+  .tacBox-7 {
+    border-bottom: none;
+    border-left: none; }
+  .tacBox-8 {
+    border-bottom: none; }
+  .tacBox-9 {
+    border-bottom: none;
+    border-right: none; }
+
+.gameItem {
+  margin: 10%;
+  width: 80%;
+  height: 80%;
+  display: block; }
+
+.Invisible {
+  display: none; }
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%; }

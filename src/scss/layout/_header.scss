@@ -1,0 +1,19 @@
+header {
+  padding-top: 30px;
+  grid-column: 1 / -1;
+  grid-template-columns: 100%;
+  justify-items: center;
+  color: $secondary-color;
+  h1 {
+    grid-column: 2 / 5;
+    justify-self: center;
+    font-size: 1.5em;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  p {
+    grid-column: 2 / 5;
+    text-align: center;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Press Start 2P", cursive;
+  line-height: 1.8;
+  font-weight: 400;
+  background-image: radial-gradient(
+    circle,
+    #e6504b 10%,
+    $primary-color-dark 50%
+  );
+}
