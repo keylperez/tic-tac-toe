@@ -27,8 +27,12 @@ const playerTabs = {
 var p1Score = 0;
 var p2Score = 0;
 var click = 0;
+var plays = 0;
 
 gameContainer.addEventListener("click", function (e){
+    if (plays === 10) return;
+    plays++;
+    console.log(`before plays: ${plays}`);
     const selected = e.target.closest(".tacBox"); //selects the element that was clicked witht the class of tacBox
     if(!selected) return; //if any other element was clicked without the class tacBox then exit function
     if (selected.classList.contains("played")) return;//exits function if box has been clicked already
@@ -55,7 +59,13 @@ gameContainer.addEventListener("click", function (e){
     testWin(index);//test to see if win
     
     turn = !turn;//change turn
-    console.log(turn);
+    if(plays === 9) {
+        const winBT = document.querySelector(".winBoxText");
+        const winB = document.querySelector(".winBox");
+        winBT.innerHTML = "IT'S A DRAW!";
+        winB.classList.remove("Invisible");
+    }
+    console.log(`after plays: ${plays}`);
 });
 
 function testWin(index) {
@@ -87,11 +97,12 @@ function testWin(index) {
                     // console.log(`tab2: ${gameTabs2[x]} & combo: ${winningCombos[y][z]}`);
                     if(gameTabs2[x] === winningCombos[y][z] && playerCheck === 2) p2Score++;
                     if(p1Score === 3 || p2Score === 3) {
+                        plays = 10;
                         winFunc(playerCheck);
                         return;
                     }
                     // console.log(`x: ${x}, y: ${y}, z: ${z}`);
-                    console.log(`tabs:\t${gameTabs1[x]}\ttabs2: ${gameTabs2[x]}\twinningCombos: ${winningCombos[y][z]}`);
+                    // console.log(`tabs:\t${gameTabs1[x]}\ttabs2: ${gameTabs2[x]}\twinningCombos: ${winningCombos[y][z]}`);
                     
                 }
         
@@ -107,10 +118,11 @@ function testWin(index) {
 
 function winFunc(player) {
     const winBT = document.querySelector(".winBoxText");
-    const winB = document.querySelector(".winBox")
+    const winB = document.querySelector(".winBox");
     winBT.innerHTML = `PLAYER ${player} WINS!!`
     winB.classList.remove("Invisible");
     console.log(`player ${player} wins!`);
+    // console.log(`plays: ${plays}`);
 }
 
 function reloadFunc(){
