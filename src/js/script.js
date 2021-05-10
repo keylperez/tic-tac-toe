@@ -106,5 +106,13 @@ function testWin(index) {
 }
 
 function winFunc(player) {
+    const winBT = document.querySelector(".winBoxText");
+    const winB = document.querySelector(".winBox")
+    winBT.innerHTML = `PLAYER ${player} WINS!!`
+    winB.classList.remove("Invisible");
     console.log(`player ${player} wins!`);
+}
+
+function reloadFunc(){
+    location.reload();
 }

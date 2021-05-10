@@ -74,6 +74,29 @@ header {
 .Invisible {
   display: none; }
 
+.winBox {
+  width: 300px;
+  height: 100px;
+  background-color: #f0ff00;
+  justify-self: end;
+  align-self: center;
+  border: 3px solid #00d8ff;
+  border-radius: 30px; }
+  .winBox button {
+    width: 300px;
+    height: 100px;
+    border: 3px solid #00d8ff;
+    border-radius: 30px;
+    background-color: #ff0048;
+    margin-top: 50px;
+    font-family: "Press Start 2P", cursive; }
+    .winBox button:hover {
+      cursor: pointer; }
+
+.winBoxText {
+  text-align: center;
+  margin-top: 10%; }
+
 .gridContainer {
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%; }
